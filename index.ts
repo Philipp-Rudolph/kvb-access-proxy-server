@@ -33,9 +33,9 @@ serve({
       console.log(`🔍 Erste 200 Zeichen (UTF-8): ${textUTF8}`);
 
       // Entscheide, ob du ISO oder UTF-8 zurückgibst
-      const finalText = iconv.encode(textISO, "utf-8").toString("utf-8");
+      const finalText = iconv.encode(textUTF8, "utf-8").toString("utf-8");
 
-      return new Response(finalText, {
+      return new Response(textUTF8, {
         status: response.status,
         headers: {
           "Content-Type": "text/plain; charset=utf-8",

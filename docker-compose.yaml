@@ -1,0 +1,7 @@
+services:
+  proxy-server:
+    build: .
+    ports:
+      - "3001:3001"
+    container_name: proxy-server
+    restart: always
