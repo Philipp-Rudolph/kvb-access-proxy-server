@@ -26,11 +26,7 @@ serve({
       const buffer = Buffer.from(arrayBuffer);
 
       // Automatische Erkennung der Kodierung testen (optional)
-      const textISO = iconv.decode(buffer, "ISO-8859-2"); // Versuche ISO-8859-2
       const textUTF8 = buffer.toString("utf-8"); // Direkt als UTF-8 interpretieren
-
-      // console.log(`🔍 Erste 200 Zeichen (ISO-8859-2): ${textISO}`);
-      console.log(`🔍 Erste 200 Zeichen (UTF-8): ${textUTF8}`);
 
       // Entscheide, ob du ISO oder UTF-8 zurückgibst
       const finalText = iconv.encode(textUTF8, "utf-8").toString("utf-8");
