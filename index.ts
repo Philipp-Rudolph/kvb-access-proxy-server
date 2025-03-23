@@ -6,7 +6,7 @@ import { join } from "path";
 const API_BASE_URL = "https://data.webservice-kvb.koeln/service/opendata/";
 const CACHE_DIR = "./cache";
 const CACHE_TTL = 3600000; // Cache-Gültigkeit: 1 Stunde in Millisekunden
-const PORT = 3000;
+const PORT = 3001;
 
 // In-Memory-Cache
 const memoryCache = new Map();
